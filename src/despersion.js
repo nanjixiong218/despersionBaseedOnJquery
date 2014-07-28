@@ -2,13 +2,13 @@
 	$.fn.despersion = function(option){
 
 		$eles = null;
-		var def = $.fn.despersion.def||{width:360,height:360,verNum:9,horNum:9};		
+		var def = $.fn.despersion.def||{width:360,height:360,verNum:9,horNum:9,img:"url('../static/image/test.jpg')"};
 		var options = $.extend({},def,option);
 		var w = options.width;
 		var h = options.height;
 		var verticleNum = options.verNum;
 		var horNum=options.horNum;
-		
+		var imgUrl = options.img;
 		var everyW = w/verticleNum;
 		var everyH = h/horNum;
 
@@ -26,7 +26,7 @@
 					"position":"absolute",
 					"width":everyW,
 					"height":everyH,
-					"backgroundImage":"url('mother8.jpg')",
+					"backgroundImage":imgUrl,
 					"backgroundSize":w+"px "+h+"px",
 					"backgroundPosition":-everyW*j+"px "+(-everyH*i)+"px",
 					"top":i*everyH+"px",	
