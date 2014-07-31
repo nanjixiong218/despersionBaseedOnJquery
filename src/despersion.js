@@ -2,8 +2,11 @@
 	$.fn.despersion = function(option){
 
 		$eles = null;
+
+        //设置默认配置选项
 		var def = $.fn.despersion.def||{width:360,height:360,verNum:9,horNum:9,img:"url('../static/image/test.jpg')"};
-		var options = $.extend({},def,option);
+		//获得配置选择，获取顺序，先从默认配置中获取，然后从传递参数中获取
+        var options = $.extend({},def,option);
 		var w = options.width;
 		var h = options.height;
 		var verticleNum = options.verNum;
