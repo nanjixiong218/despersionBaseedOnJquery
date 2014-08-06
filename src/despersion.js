@@ -87,11 +87,11 @@
 						"top":action[(i*horNum+j)%4].top,
 						"left":action[(i*horNum+j)%4].left,
 						"opacity":0
-					},1000);	
+					},(i*horNum+j)*50);
 				}	
 			}	
 		}
-
+        //用的replaceWith导致如果jquery选取的是多个div,所有的元素全部会消失掉，变成这一个container
 		$this.replaceWith(container);
 		$(document).on("keypress",function(event){
 			if(event.which==2&&event.ctrlKey){//esc等功能键获取不到,直接按b,which等于98，同时按ctrl,which就变成了2
