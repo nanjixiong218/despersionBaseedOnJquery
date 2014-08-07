@@ -6,24 +6,41 @@
 <style>  
 </style>  
 <script type="text/javascript" src="../lib/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="../lib/html2canvas.js"></script>
 <script type="text/javascript" src="../src/despersion.js"></script>
 <script type="text/javascript">
  
 	window.onload = loaded;
 	function loaded(){
-		$("#despersion").despersion({width:"360",height:"450",img:"url('../static/image/test.jpg')"});
+		//$("#despersion").despersion({width:"360",height:"450",img:"url('../static/image/test.jpg')"});
+        document.getElementById("myDoc").onclick = function(){
+            var w = this.style.width;
+            var h = this.style.height;
+            w = w.replace(/(\d*).*/,"$1");
+            h = h.replace(/(\d*).*/,"$1");
+            html2canvas(this,{
+                onrendered:function(canvas){
+                    $("#myDoc").despersion({width:w,heidht:h,img:"url("+canvas.toDataURL()+")"});
+                    $("#despersion").trigger("click");
+                }
+            })
+            $("#btn").click(function(){
+                $("#despersion").trigger("click");
+            })
+        };
 	}
 </script>
 </head>  
   
 <body >
  
-<div id="despersion">
+
+<div id="myDoc"style="width:360px;height:360px">
+    <p>
+        啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦
+    </p>
 </div>
-<div class="container">
-</div>
-<div class="container">
-</div>
+<input id ="btn"  type="button" value="clickTrigger"/>
 </body>
 </html>  
 

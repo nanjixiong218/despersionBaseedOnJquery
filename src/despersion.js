@@ -25,11 +25,10 @@
 		var everyH = h/horNum;
         //总方格数
 		var eleNum = verticleNum*horNum;
-		var container = $("<div>Ctrl+b</div>").css({
+		var container = $("<div id='despersion'>Ctrl+b</div>").css({
 				"position":"relative",
 				"width":w,
 				"height":h,
-                "margin":"0 auto",
                 "text-align":'center',
 				"opacity":1
 			});
@@ -87,7 +86,7 @@
 						"top":action[(i*horNum+j)%4].top,
 						"left":action[(i*horNum+j)%4].left,
 						"opacity":0
-					},(i*horNum+j)*50);
+					},2000);
 				}	
 			}	
 		};
