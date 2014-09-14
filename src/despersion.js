@@ -59,7 +59,7 @@
 		var _gather = function(){
 			for(var i=0;i<verticleNum;i++){
 				for(var j=0;j<horNum;j++){
-					$($eles[i*horNum+j]).animate({
+					$($eles[i*horNum+j]).stop().show().animate({
 						"top":i*everyH+"px",	
 						"left":j*everyW+"px",
 						"opacity":1
@@ -82,11 +82,11 @@
                     //右下角
                     action.push({"top":(Math.random()*1000|0)+"px",left:(Math.random()*1000|0)+"px"});
                     //分散函数
-					$($eles[i*horNum+j]).animate({
+					$($eles[i*horNum+j]).stop().animate({
 						"top":action[(i*horNum+j)%4].top,
 						"left":action[(i*horNum+j)%4].left,
-						"opacity":0
-					},2000);
+						"opacity":0,
+                    },2000);
 				}	
 			}	
 		};
