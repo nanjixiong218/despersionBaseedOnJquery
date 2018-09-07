@@ -1,7 +1,9 @@
-##一个图片分块发散聚合的jquery插件
+## 一个图片分块发散聚合的jquery插件
 
-###使用方法
+### 使用方法
+
 很简单
+
 * 一个div
 > <div id="despersion"></div>
 
@@ -24,4 +26,5 @@
 > $("#despersion").despersion();
 
 ###演示地址
-[地址](http://www.shadowvip.com/static/despersion.html)
+
+[地址](http://www.shadowvip.com/public/staticDemos/despersion/despersion.html)
