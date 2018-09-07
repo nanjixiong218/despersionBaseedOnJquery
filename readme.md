@@ -25,6 +25,6 @@
 * 如果默认值全部指定好了就可以直接
 > $("#despersion").despersion();
 
-###演示地址
+### 演示地址
 
 [地址](http://www.shadowvip.com/public/staticDemos/despersion/despersion.html)
